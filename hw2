@@ -1,0 +1,17 @@
+n = int(input())
+
+o = []
+c = {}
+
+for i in range(n):
+    w = input().strip()
+    if w not in c:
+        o.append(w)
+        c[w] = 1
+    else:
+        c[w] += 1
+
+print(len(o))           
+print(o)                  
+print([c[w] for w in o])  
+print({word: c[w] for w in o})
